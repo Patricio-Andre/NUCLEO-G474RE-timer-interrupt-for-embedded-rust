@@ -1,9 +1,0 @@
-/home/patricio/Documentos/rust_course/first_example/rust-fundamentals/examples/embedded/blink_minimum/target/thumbv7em-none-eabihf/release/deps/critical_section-1e4efb2ac752dfa5.d: /home/patricio/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/critical-section-1.2.0/src/lib.rs /home/patricio/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/critical-section-1.2.0/src/mutex.rs /home/patricio/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/critical-section-1.2.0/src/../README.md
-
-/home/patricio/Documentos/rust_course/first_example/rust-fundamentals/examples/embedded/blink_minimum/target/thumbv7em-none-eabihf/release/deps/libcritical_section-1e4efb2ac752dfa5.rlib: /home/patricio/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/critical-section-1.2.0/src/lib.rs /home/patricio/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/critical-section-1.2.0/src/mutex.rs /home/patricio/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/critical-section-1.2.0/src/../README.md
-
-/home/patricio/Documentos/rust_course/first_example/rust-fundamentals/examples/embedded/blink_minimum/target/thumbv7em-none-eabihf/release/deps/libcritical_section-1e4efb2ac752dfa5.rmeta: /home/patricio/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/critical-section-1.2.0/src/lib.rs /home/patricio/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/critical-section-1.2.0/src/mutex.rs /home/patricio/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/critical-section-1.2.0/src/../README.md
-
-/home/patricio/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/critical-section-1.2.0/src/lib.rs:
-/home/patricio/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/critical-section-1.2.0/src/mutex.rs:
-/home/patricio/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/critical-section-1.2.0/src/../README.md:

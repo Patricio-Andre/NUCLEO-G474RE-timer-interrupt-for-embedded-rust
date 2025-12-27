@@ -1,0 +1,36 @@
+# Ignora artefatos de build do Rust e binários gerados
+
+# Diretório de build do Cargo
+/target/
+
+# Artefatos intermediários e binários
+**/*.rlib
+**/*.rmeta
+**/*.d
+**/*.o
+**/*.a
+**/*.so
+**/*.dylib
+**/*.dll
+**/*.exe
+**/*.elf
+**/*.bin
+**/*.hex
+**/*.map
+
+# Arquivos de log e temporários
+*.log
+*.tmp
+*.bak
+
+# Editor/IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Sistema
+.DS_Store
+
+# Diretórios de ferramentas locais
+.cargo/

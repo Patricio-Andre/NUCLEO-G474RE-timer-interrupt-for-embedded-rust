@@ -1,1 +1,0 @@
-rd_("BaLogs a message at the info level.0BaLogs a message at the warn level.0BbLogs a message at the debug level.0BbLogs a message at the error level.0BbLogs a message at the trace level.0AkUtilities para os exemplos.CkLogger utilities configur\xc3\xa1veis via <em>feature flags</em>.CeExemplo m\xc3\xadnimo: piscar o LED da placa Nucleo G474RE.")

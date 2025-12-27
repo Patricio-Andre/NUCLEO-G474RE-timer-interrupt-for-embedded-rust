@@ -1,1 +1,0 @@
-window.SIDEBAR_ITEMS = {"fn":["init"],"macro":["debug","error","info","trace","warn"]};
