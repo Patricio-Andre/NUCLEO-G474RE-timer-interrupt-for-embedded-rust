@@ -1,3 +1,0 @@
-cargo:rustc-link-search=/home/patricio/Documentos/rust_course/first_example/rust-fundamentals/examples/embedded/blink_minimum/target/thumbv7em-none-eabihf/debug/build/stm32g4-344cf290db9740d1/out
-cargo:rerun-if-changed=src/stm32g474/device.x
-cargo:rerun-if-changed=build.rs
