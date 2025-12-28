@@ -1,6 +1,6 @@
 [package]
 name = "NUCLEO-G474RE-blink-for-embedded-rust"
-version = "0.1.1"
+version = "0.1.2"
 edition = "2024"
 description = "Example project for blinking an LED on the NUCLEO-G474RE board using embedded Rust."
 license = "MIT OR Apache-2.0"
