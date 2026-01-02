@@ -1,0 +1,7 @@
+# choosing what MCU youre going to use
+[default.general]
+chip = "STM32G474RETx"
+
+# choosing what logging backend to use
+[default.rtt]
+enabled = true

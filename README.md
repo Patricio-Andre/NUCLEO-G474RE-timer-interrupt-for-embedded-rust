@@ -38,7 +38,7 @@ sudo apt install gcc-arm-none-eabi binutils-arm-none-eabi
 - Flashing / debug tools (choose one or more):
 
 ```bash
-cargo install probe-run       # runner for `cargo run`
+cargo install probe-rs         # runner for `cargo run`
 cargo install cargo-flash      # cargo-flash
 cargo install cargo-embed      # cargo-embed (optional, supports many boards)
 ```
@@ -56,58 +56,34 @@ rustflags = ["-C", "link-arg=-Tlink.x"]
 target = "thumbv7em-none-eabihf"
 ```
 
-Important: the provided linker script is named `memory.x`. If you want to
-keep that name, change the flag to `-Tmemory.x` or rename `memory.x` to
-`link.x`.
+Important: the provided linker script is named `memory.x`.
 
 ## Local build
 
 Debug build:
 
 ```bash
-cargo build --target thumbv7em-none-eabihf
+cargo build
 ```
 
 Release build (optimized):
 
 ```bash
-cargo build --release --target thumbv7em-none-eabihf
+cargo build --release
 ```
 
-Or use the `Makefile`:
-
-```bash
-make build        # debug
-make release      # release
-```
 
 Using the `Makefile` is convenient but you should understand the underlying
 commands.
 
 ## Flash / Run on Nucleo G474RE
 
-If `probe-run` / `probe-rs` can automatically detect the chip:
-
-```bash
-probe-run target/thumbv7em-none-eabihf/release/blink_minimum
-```
-
 If automatic detection fails, specify the chip explicitly:
 
 ```bash
-probe-run --chip STM32G474RE target/thumbv7em-none-eabihf/release/blink_minimum
-# or
-cargo-flash --chip STM32G474RE --target thumbv7em-none-eabihf --release
+cargo run
 # or (with cargo-embed)
-cargo embed --chip STM32G474RE --release
-```
-
-Convenient `Makefile` targets:
-
-```bash
-make embed    # runs `cargo embed --chip STM32G474RE --release`
-make flash    # runs `cargo-flash --chip STM32G474RE --target ... --release`
-make run      # runs `cargo run --release` with runner configured
+cargo embed
 ```
 
 ## Board Manuals and References
@@ -124,4 +100,15 @@ manuals for the MCU and the Nucleo board. These manuals contain pinouts,
 electrical characteristics, peripheral descriptions, and programming
 guidelines that are helpful when adapting this example to other boards.
 
+**SVD file for debugging purposes**: https://github.com/modm-io/cmsis-svd-stm32.git
+
+## Logging
+
+Uses defmt for logging, enabled via RTT by default. Read the documentation to use it properly: https://defmt.ferrous-systems.com/
+
+## VsCode Debugging Setup
+
+This project includes a `.vscode/launch.json` file configured for debugging
+with the Cortex-Debug extension. Make sure to install the extension and adjust
+the `executable` path if necessary.
 

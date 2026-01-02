@@ -1,0 +1,27 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "preLaunchTask": "Build Task",
+      "type": "probe-rs-debug",
+      "request": "launch",
+      "name": "probe_rs Debug",
+      "flashingConfig": {
+        "flashingEnabled": true,
+        "haltAfterReset": false,
+      },
+      //!MODIFY
+      "chip": "STM32G474RETx",
+      "coreConfigs": [
+        {
+          "coreIndex": 0,
+          "rttEnabled": true,
+          //!MODIFY
+          "programBinary": "target/thumbv7em-none-eabihf/debug/NUCLEO-G474RE-blink-for-embedded-rust",
+          //!MODIFY
+          "svdFile": "STM32G474.svd"
+        }
+      ]
+    }
+  ]
+}

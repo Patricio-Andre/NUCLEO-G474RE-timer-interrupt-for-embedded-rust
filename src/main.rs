@@ -2,7 +2,7 @@
 //!
 //! This binary is built with `no_std` and `cortex-m-rt` and demonstrates a
 //! simple loop that toggles a GPIO pin to turn an LED on and off.
-//!
+//! Provides information via Real Time Transfer (RTT) logs 
 //! Inline comments provide guidance for learning and documentation.
 
 // Deny warnings and unsafe code to simplify teaching and testing.
@@ -25,16 +25,22 @@ use cortex_m_rt::entry;
 
 use core::panic::PanicInfo;
 
+use defmt;
+
+use defmt_rtt as _;
+
+
 // Minimal panic handler for `no_std` embedded programs.
 #[panic_handler]
 fn panic(_info: &PanicInfo) -> ! {
+    defmt::error!("Error type: {}", _info);
     loop {}
 }
+
+
 // Application entry point.
 #[entry]
 fn main() -> ! {
-    // No logging backend configured.
-    
     // Acquire access to microcontroller peripherals.
     // `take()` returns `Some(Peripherals)` only once; it will fail if
     // peripherals have already been taken elsewhere.
@@ -53,14 +59,19 @@ fn main() -> ! {
     // Main loop: toggle the LED with simple busy-wait delays.
     loop {
         // Set LED low.
-        for _ in 0..2_000_000 {
+        // rprintln!("Set LED Low");
+        for _ in 0..20_000 {
             led.set_low().expect("set low gone wrong");
         }
-
+        // info test
+        defmt::info!("LED was setted LOW");
         // Set LED high.
-        for _ in 0..10_000_000 {
+        // rprintln!("Set LED High");
+        for _ in 0..20_000 {
             led.set_high().expect("set high gone wrong");
         }
+        // using info just like you can use format!
+        defmt::info!("LED was setted HIGH? {}", led.is_set_high().unwrap());
     }
 }
 
