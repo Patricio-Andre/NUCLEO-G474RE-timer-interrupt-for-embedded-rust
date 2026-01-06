@@ -1,7 +1,8 @@
-# blink by button with polling — Nucleo G474RE
+# blink by button with interrupt — Nucleo G474RE
 
-This repository contains a Rust example that blinks the LED (PA5) when pressing user button (PC13) on the
-Nucleo G474RE board. The project is intended as a starting point for
+This repository contains a Rust example that blinks the LED (PA5) when the User Button (PC13) is pressed on the Nucleo G474RE board. In this example, the functionality is implemented using interrupts to transition between states, with precise delay times.
+
+The project is intended as a starting point for
 embedded Rust development on the STM32G4xx family. The repository includes a
 canonical project layout, `Cargo.toml`, `.cargo/config.toml`, and
 `memory.x` linker script — common components for embedded Rust projects.
@@ -109,4 +110,4 @@ with the Cortex-Debug extension. Make sure to install the extension and adjust
 the `executable` path if necessary.
 
 ## References
-This project structure and logic were inspired by the excellent examples from The Embedded Rustacean: [STM32F4 Embedded Rust at the HAL: GPIO Button Controlled Blinking](https://blog.theembeddedrustacean.com/stm32f4-embedded-rust-at-the-hal-gpio-button-controlled-blinking).
+This project structure and logic were inspired by the excellent examples from The Embedded Rustacean: [STM32F4 Embedded Rust at the HAL: GPIO Button Controlled Blinking](https://blog.theembeddedrustacean.com/stm32f4-embedded-rust-at-the-hal-gpio-interrupts).
