@@ -1,6 +1,10 @@
-# blink by button with interrupt — Nucleo G474RE
+# button and timer interrupts to blink a led — Nucleo G474RE
 
-This repository contains a Rust example that blinks the LED (PA5) when the User Button (PC13) is pressed on the Nucleo G474RE board. In this example, the functionality is implemented using interrupts to transition between states, with precise delay times.
+This repository contains a Rust example demonstrating how to blink an LED (PA5) when the User Button (PC13) is pressed on the Nucleo G474RE board.
+
+The functionality is implemented using external interrupts to handle button presses and timer interrupts to manage precise LED toggling delays.
+
+Note: Currently, the delay between interrupts is limited to a maximum of 1 second due to the specific timer configuration used in this example.
 
 The project is intended as a starting point for
 embedded Rust development on the STM32G4xx family. The repository includes a
@@ -17,8 +21,8 @@ Main contents:
 ## Quick overview
 
 The crate is configured for the `thumbv7em-none-eabihf` target and uses the
-`stm32g474` feature of `stm32g4xx-hal`. This example focuses on blinking the
-LED and does not depend on any logging backend by default.
+`stm32g474` feature of `stm32g4xx-hal`. 
+
 
 ## Prerequisites
 
@@ -110,4 +114,4 @@ with the Cortex-Debug extension. Make sure to install the extension and adjust
 the `executable` path if necessary.
 
 ## References
-This project structure and logic were inspired by the excellent examples from The Embedded Rustacean: [STM32F4 Embedded Rust at the HAL: GPIO Button Controlled Blinking](https://blog.theembeddedrustacean.com/stm32f4-embedded-rust-at-the-hal-gpio-interrupts).
+This project structure and logic were inspired by the excellent examples from The Embedded Rustacean: [STM32F4 Embedded Rust at the HAL: Timer Interrupts](https://blog.theembeddedrustacean.com/stm32f4-embedded-rust-at-the-hal-timer-interrupts).

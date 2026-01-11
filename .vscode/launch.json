@@ -17,7 +17,7 @@
           "coreIndex": 0,
           "rttEnabled": true,
           //!MODIFY
-          "programBinary": "target/thumbv7em-none-eabihf/debug/NUCLEO-G474RE-blink-for-embedded-rust",
+          "programBinary": "target/thumbv7em-none-eabihf/debug/NUCLEO-G474RE-interrupt-blink-for-embedded-rust",
           //!MODIFY
           "svdFile": "STM32G474.svd"
         }
