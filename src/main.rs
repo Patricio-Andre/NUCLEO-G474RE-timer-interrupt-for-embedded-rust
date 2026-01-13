@@ -101,10 +101,7 @@ fn main() -> ! {
     let gpioa = dp.GPIOA.split(&mut rcc);
     let gpioc = dp.GPIOC.split(&mut rcc);
     // Setting clocks
-    // consumes the configuration!
-    // uses hsi = 16 mhz
-    let config = hal::rcc::Config::default();
-    let rcc = rcc.freeze(config);
+    // Constrain method already set clock as default --> HSI clock: 16mhz
     let timer = Timer::new(dp.TIM2, &rcc.clocks);
 
     // Turn it into a CountDownTimer.
